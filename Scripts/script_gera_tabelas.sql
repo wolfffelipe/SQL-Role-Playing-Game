@@ -1,10 +1,12 @@
-IF OBJECT_ID('tb_criticidade')	IS NOT NULL BEGIN DROP TABLE tb_criticidade		END
-IF OBJECT_ID('tb_habilidade')	IS NOT NULL BEGIN DROP TABLE tb_habilidade		END
-IF OBJECT_ID('tb_personagem')	IS NOT NULL BEGIN DROP TABLE tb_personagem		END
-IF OBJECT_ID('tb_armadura')		IS NOT NULL BEGIN DROP TABLE tb_armadura		END
-IF OBJECT_ID('tb_arma')			IS NOT NULL BEGIN DROP TABLE tb_arma			END
-IF OBJECT_ID('tb_nome')			IS NOT NULL BEGIN DROP TABLE tb_nome			END
-IF OBJECT_ID('tb_raca_classe')	IS NOT NULL BEGIN DROP TABLE tb_raca_classe		END
+USE db_rpg
+
+IF OBJECT_ID('dbo.tb_criticidade', 'U')	IS NOT NULL BEGIN DROP TABLE tb_criticidade		END
+IF OBJECT_ID('dbo.tb_habilidade', 'U')	IS NOT NULL BEGIN DROP TABLE tb_habilidade		END
+IF OBJECT_ID('dbo.tb_personagem', 'U')	IS NOT NULL BEGIN DROP TABLE tb_personagem		END
+IF OBJECT_ID('dbo.tb_armadura', 'U')	IS NOT NULL BEGIN DROP TABLE tb_armadura		END
+IF OBJECT_ID('dbo.tb_arma', 'U')		IS NOT NULL BEGIN DROP TABLE tb_arma			END
+IF OBJECT_ID('dbo.tb_nome', 'U')		IS NOT NULL BEGIN DROP TABLE tb_nome			END
+IF OBJECT_ID('dbo.tb_raca_classe', 'U')	IS NOT NULL BEGIN DROP TABLE tb_raca_classe		END
 
 CREATE TABLE tb_raca_classe
 (
