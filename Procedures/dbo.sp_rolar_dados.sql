@@ -1,4 +1,4 @@
-CREATE PROCEDURE proc_rolar_dados (@qtd_dados INT, @qtd_lados INT)
+CREATE PROCEDURE sp_rolar_dados (@qtd_dados INT, @qtd_lados INT)
 AS
 BEGIN
 	SET NOCOUNT ON

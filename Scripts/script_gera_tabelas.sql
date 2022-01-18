@@ -30,7 +30,7 @@ CREATE TABLE tb_arma
 (
 	 cd_arma		INT				NOT NULL IDENTITY UNIQUE
 	,nm_arma		VARCHAR(100)	NULL
-	,vl_ataque		INT				NULL
+	,vl_ataque		VARCHAR(5)		NULL
 	
 	,CONSTRAINT		pk_codigo_arma	PRIMARY KEY (cd_arma)
 )
