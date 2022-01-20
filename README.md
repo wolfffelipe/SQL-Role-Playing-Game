@@ -1,14 +1,50 @@
 # T-SQL + RPG
 
-1. Crie um database chamado "db_rpg"
+* Execute os .sql se acordo com a ordem estabelecida 
 
-2. Execute os scripts de geração de tabelas
+* Os Scripts / Procs que se iniciam com "999" não são obrigatórios para a criação da base, mas é neles que está a diversão! (use-os somente ao término da criação de toda estrutura)
 
-3. Execute os scripts que populam as tabelas (Nomes, Raças e Classes, Ataques e Erros Críticos, Armas e Armaduras)
+## Modo Batalha
 
-4. Execute a trigger (gatilho) que gera as habilidades quando um personagem for inserido
+Antes de tudo execute a proc e gere pelo menos dois personagens, exemplo:
 
-5. Crie as procs executando os scripts da pasta "Procedures"
+~~~tsql
+exec sp_gera_personagem
+~~~
+
+Para realizar uma batalha primeiro escolha dois personagens e pegue seus códigos, depois é só rodar a Procecure de batalha, exemplo:
+
+~~~tsql
+exec sp_batalha 15, 18 
+~~~
+
+Neste exemplo, foram utilizados os personagens "15" e "18".
+
+### Cálculos da batalha
+
+É rolado o dado referente a arma que o personagem tem e gera-se um valor de Ataque.
+
+Subtraímos deste valor quanto de defesa na Armadura o outro personagem tem.
+
+Desse valor resulta o Dano, que tiramos do Ponto de Vida (PdV) do personagem atacado.
+
+> Resumindo:
+> Dano = Ataque - Defesa
+> PdV = PdV - Dano
+
+Quem tiver primeiro seus PdV zerados, morre e o outro personagem vence.
+
+* Caso existe um Erro Crítico (1) ou um Dano Crítico (máximo do dado de ataque), uma mensagem é exibida.
+
+* Caso a Defesa de um personagem seja maior que o ataque do oponente, uma mensagem de Defesa é exibida.
+
+## Rolar Dados
+
+Proc que serve somente como diversão, escolha quando dados e quantos lados e execute! Por exemplo, para rolar 2d10 use:
+
+~~~tsql
+exec sp_rolar_dados 2, 10 
+~~~
 
 ## Referências utilizadas
 

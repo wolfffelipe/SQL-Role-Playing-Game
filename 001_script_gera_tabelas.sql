@@ -1,3 +1,5 @@
+CREATE DATABASE db_rpg
+
 USE db_rpg
 
 IF OBJECT_ID('dbo.tb_criticidade', 'U')	IS NOT NULL BEGIN DROP TABLE tb_criticidade		END
