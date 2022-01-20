@@ -12,7 +12,7 @@ Antes de tudo execute a proc e gere pelo menos dois personagens, exemplo:
 exec sp_gera_personagem
 ~~~
 
-Para realizar uma batalha primeiro escolha dois personagens e pegue seus códigos, depois é só rodar a Procecure de batalha, exemplo:
+Para realizar uma batalha, primeiro escolha dois personagens e pegue seus códigos, depois é só rodar a Procecure de batalha, exemplo:
 
 ~~~tsql
 exec sp_batalha 15, 18 
@@ -24,23 +24,21 @@ Neste exemplo, foram utilizados os personagens "15" e "18".
 
 É rolado o dado referente a arma que o personagem tem e gera-se um valor de Ataque.
 
-Subtraímos deste valor quanto de defesa na Armadura o outro personagem tem.
+Subtraímos deste valor o quanto de defesa na Armadura o outro personagem tem.
 
 Desse valor resulta o Dano, que tiramos do Ponto de Vida (PdV) do personagem atacado.
 
-> Resumindo:
-> Dano = Ataque - Defesa
-> PdV = PdV - Dano
+> Resumindo: (Dano = Ataque - Defesa) e (PdV = PdV - Dano)
 
 Quem tiver primeiro seus PdV zerados, morre e o outro personagem vence.
 
-* Caso existe um Erro Crítico (1) ou um Dano Crítico (máximo do dado de ataque), uma mensagem é exibida.
+* Caso exista um Erro Crítico (=1) ou um Dano Crítico (máximo do dado de ataque), uma mensagem é exibida.
 
 * Caso a Defesa de um personagem seja maior que o ataque do oponente, uma mensagem de Defesa é exibida.
 
 ## Rolar Dados
 
-Proc que serve somente como diversão, escolha quando dados e quantos lados e execute! Por exemplo, para rolar 2d10 use:
+Proc que serve somente como diversão, escolha quantos dados, quantos lados e execute! Por exemplo, para rolar 2d10 use:
 
 ~~~tsql
 exec sp_rolar_dados 2, 10 
