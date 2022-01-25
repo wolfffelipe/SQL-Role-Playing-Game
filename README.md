@@ -1,3 +1,5 @@
+![SQL & RPG](https://bn1303files.storage.live.com/y4mlbbx3PWW7bCy0OfxYxhnmkma6UA0un3ugIAMw4sGrYXhoMvTvDNgHSi2gLitPsTRkFQOusuVffFsfrwyrgmfHeWSwcsiEStfY9hQscLbaQ9FOD_BWku0FVEsB4u9AC1jWJuMU1MArU12uKdI-HV1nLAl64pMImj2FockDaKWPwiuw9wXGTIXvYHCVmUowugUcSmemXFwcCjQEnhqdS5w-e8iy9lsLeOm6SE1T5NZ4MM?encodeFailures=1&width=283&height=155)
+
 # T-SQL + RPG
 
 * Execute os .sql se acordo com a ordem estabelecida 
