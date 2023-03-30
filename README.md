@@ -14,7 +14,7 @@ Antes de tudo execute a proc e gere pelo menos dois personagens, exemplo:
 exec sp_gera_personagem
 ~~~
 
-Para realizar uma batalha, primeiro escolha dois personagens e pegue seus códigos, depois é só rodar a Procecure de batalha, exemplo:
+Para realizar uma batalha, primeiro escolha dois personagens e pegue seus códigos, depois é só rodar a Procedure de batalha, exemplo:
 
 ~~~tsql
 exec sp_batalha 15, 18 
